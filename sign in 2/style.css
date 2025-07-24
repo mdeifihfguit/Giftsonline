@@ -1,0 +1,154 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.card-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Sign-in Card */
+.login-card {
+ 
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeSlide 1s ease-out;
+  border: 1px solid black;
+}
+
+.login-card h2 {
+  margin-bottom: 0.3rem;
+  color: #000000;
+  font-size: 32px;
+}
+
+.login-card p {
+  margin-bottom: 1.5rem;
+  color: #070707;
+  font-size: 17px;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+
+}
+
+.input-group input:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background: rgb(37, 37, 250);
+  color: rgb(255, 251, 251);
+  font-weight: bold;
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  transition: background0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #353434;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ gap: 1rem;
+  font-size: 30px;
+  color: rgb(44, 44, 247);
+  padding-bottom: 10px;
+  
+}
+
+.heading{
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.para{
+  color: rgb(46, 45, 45);
+}
+.pass{
+  color: #302f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+.contact-icon{
+  padding-left: 1rem;
+  padding-top: 1rem;
+ 
+  font-size: 1.3rem;
+}
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*Media query*/
+@media (max-width:320px) {
+  button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+ 
+}
+}

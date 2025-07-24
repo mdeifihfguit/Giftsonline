@@ -1,0 +1,115 @@
+/* navbar */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+    --main-color: #e83e8c;
+    --logo-font: Lobster;
+}
+
+:root {
+    --primary-color: #e83e8c;
+    --secondary-color: #6f42c1;
+    --accent-color: #20c997;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+.navbar-brand {
+    font-family: var(--logo-font);
+    color: var(--main-color);
+    padding-left: 10px;
+    font-size: 32px;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+
+}
+
+.nav-dropdown {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+
+.nav-link {
+    display: block;
+    margin: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: 0px;
+    transition: 0.3s linear;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: 0.3s linear;
+}
+
+.navbar li:hover>.nav-link {
+    color: var(--main-color);
+}
+
+.navbar li:hover>.nav-dropdown {
+    display: block;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.nav-icons a {
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+}
+
+.nav-icons a:hover {
+    color: var(--main-color);
+    background-color: transparent;
+}
+
+@media screen and (max-width:1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+.nav-icons {
+    justify-content: start;
+}
+
+.nav-block {
+    display: block;
+    position: relative;
+}
+
+
